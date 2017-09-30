@@ -67,9 +67,9 @@ def detector(mp3_ready_event, sigint_event, wav_fp, chunk_size, sample_rate, gpi
 
     chunk_time = 1. / sample_rate * chunk_size
     chunk_no = 0
-    threshold_off_min = [2.5, 1.5, 1.5, 2.5]
-    threshold_seed = [3, 2, 2, 3]
-    threshold_size = 30
+    threshold_off_min = [2.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 2.5]
+    threshold_seed = [2, 1, 1, 1, 1, 1 , 1, 2]
+    threshold_size = 60
     threshold_deque = [collections.deque() for _ in xrange(0, config['num_relays'])]
     for i,d in enumerate(threshold_deque):
         for _ in xrange(threshold_size):
